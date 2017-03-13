@@ -6,6 +6,8 @@ import numpy as np
 cimport numpy as np
 import pandas as pd
 
+__version__ = '0.1.1'
+
 cdef extern from 'mrmr.cpp':
   cdef vector[unsigned long] _mRMR(
     vector[vector[int]] _data,

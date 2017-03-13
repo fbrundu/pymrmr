@@ -12,9 +12,10 @@ Tests for `pymrmr` module.
 import sys
 import unittest
 
-from pymrmr import pymrmr
+from pymrmr import mRMR
 
 
+# TODO
 
 class TestPymrmr(unittest.TestCase):
 
