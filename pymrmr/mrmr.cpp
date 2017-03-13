@@ -8,11 +8,13 @@
 //
 //The CopyRight is reserved by the author.#include <math.h>
 
+#include <omp.h>
 #include <stdexcept>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
 #include <unistd.h>
+#include <vector>
 
 #include "pbetai.cpp"
 #include "sort2.cpp"
@@ -24,7 +26,7 @@
 
 using namespace std;
 
-double calMutualInfo (vector< vector<int> > data, unsigned long v1,
+double calMutualInfo (std::vector< std::vector<int> > data, unsigned long v1,
   unsigned long v2);
 double compute_mutualinfo (double *pab, long pabhei, long pabwid);
 template < class T > void copyvecdata (T * srcdata, long len, int *desdata,
@@ -158,7 +160,7 @@ double compute_mutualinfo (double *pab, long pabhei, long pabwid) {
   return muInf;
 }
 
-double calMutualInfo (vector< vector<int> > data, unsigned long v1,
+double calMutualInfo (std::vector< std::vector<int> > data, unsigned long v1,
     unsigned long v2) {
   double mi = -1;		//initialized as an illegal value
   if (v1 >= data[0].size() || v2 >= data[0].size())
@@ -169,7 +171,7 @@ double calMutualInfo (vector< vector<int> > data, unsigned long v1,
   int *v2data = new int[data.size()];
   if (!v1data || !v2data)
     throw std::runtime_error("Line " S__LINE__ "Fail to allocate memory");
-  // TODO number of threads
+  #pragma omp parallel num_threads(4)
   #pragma omp parallel for
   for (unsigned long i = 0; i < data.size(); i++) {
       v1data[i] = data[i][v1];
@@ -189,10 +191,10 @@ double calMutualInfo (vector< vector<int> > data, unsigned long v1,
   return mi;
 }
 
-vector<unsigned long> _select (vector< vector<int> > _data,
-    vector<string> _names, unsigned long _nfeats, Method _method) {
+std::vector<unsigned long> _select (std::vector< std::vector<int> > _data,
+    std::vector<string> _names, unsigned long _nfeats, Method _method) {
 
-  vector<unsigned long> _feats_ixs(_nfeats);
+  std::vector<unsigned long> _feats_ixs(_nfeats);
 
   unsigned long poolUseFeaLen = 5000;
   // there is a target variable (the first one), that is why must remove one
@@ -279,7 +281,8 @@ vector<unsigned long> _select (vector< vector<int> > _data,
   return _feats_ixs;
 }
 
-vector<unsigned long> _mRMR (vector< vector<int> > _data, vector<string> _names,
+std::vector<unsigned long> _mRMR (std::vector< std::vector<int> > _data,
+    std::vector<string> _names,
     int _method, unsigned long _nfeats) {
 
   if (_data.empty())
