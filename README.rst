@@ -37,7 +37,7 @@ Installation
 .. code-block:: none
 
    pip install numpy Cython
-   pip install git+https://github.com/fbrundu/pymrmr.git
+   pip install pymrmr
    
 Usage
 --------
