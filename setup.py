@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from setuptools import setup
-from setuptools import Extension
+from setuptools import setup, Extension
 from Cython.Distutils import build_ext
 import glob as gg
 import numpy as np
@@ -30,7 +29,7 @@ if sys.platform == 'darwin':
 
 setup(
   name='pymrmr',
-  version='0.1.1',
+  version='0.1.6',
   description="Python3 binding to mRMR Feature Selection algorithm",
   long_description=readme + '\n\n' + history,
   author="Francesco G. Brundu",
