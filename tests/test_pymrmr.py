@@ -40,5 +40,4 @@ class TestPymrmr(unittest.TestCase):
 
     for n in self.feats.keys():
       feats = mRMR(self.data, 'MIQ', n)
-
-    assert set(self.fs.X.columns) == set(self.feats[n])
+      assert self.feats[n] == set(feats)
