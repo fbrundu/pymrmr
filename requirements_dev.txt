@@ -2,7 +2,7 @@ wheel==0.29.0
 bumpversion==0.5.3
 pip==9.0.1
 watchdog
-flake8
+flake8==3.3.0
 tox
 coverage
 Sphinx
