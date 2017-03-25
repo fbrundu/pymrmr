@@ -7,7 +7,7 @@ tox
 coverage
 Sphinx
 cryptography
-PyYAML
+PyYAML==3.12
 numpy
 Cython
 pandas
