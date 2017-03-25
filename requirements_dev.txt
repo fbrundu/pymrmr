@@ -9,5 +9,5 @@ Sphinx
 cryptography
 PyYAML
 numpy
-Cython
+Cython==0.25.2
 pandas
