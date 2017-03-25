@@ -6,7 +6,7 @@ flake8
 tox
 coverage
 Sphinx
-cryptography
+cryptography==1.8.1
 PyYAML
 numpy
 Cython
