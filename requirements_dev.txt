@@ -1,5 +1,5 @@
+bumpversion==0.5.3
 pip==9.0.1
-bumpversion
 wheel
 watchdog
 flake8
