@@ -1,6 +1,6 @@
-pip
-bumpversion
 wheel==0.29.0
+bumpversion==0.5.3
+pip==9.0.1
 watchdog
 flake8
 tox
@@ -8,6 +8,6 @@ coverage
 Sphinx
 cryptography
 PyYAML
-numpy
-Cython
-pandas
+numpy==1.12.1
+Cython==0.25.2
+pandas==0.19.2
