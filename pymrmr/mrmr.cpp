@@ -13,7 +13,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
+#ifdef _WIN32
+#include <io.h>
+#else
 #include <unistd.h>
+#endif
 #include <vector>
 
 #include "pbetai.cpp"
