@@ -29,7 +29,7 @@ if sys.platform == 'darwin':
 
 setup(
   name='pymrmr',
-  version='0.1.7',
+  version='0.1.8',
   description="Python3 binding to mRMR Feature Selection algorithm",
   long_description=readme + '\n\n' + history,
   author="Francesco G. Brundu",
