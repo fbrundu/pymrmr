@@ -6,7 +6,7 @@ pip==9.0.1
 flake8==3.3.0
 coverage==4.4.1
 Sphinx==1.6.2
-cryptography==1.9
+cryptography==2.0.1
 PyYAML==3.12
 numpy==1.13.0
 Cython==0.25.2
