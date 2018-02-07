@@ -5,7 +5,7 @@ bumpversion==0.5.3
 pip==9.0.1
 flake8==3.5.0
 coverage==4.4.1
-Sphinx==1.6.4
+Sphinx==1.6.7
 cryptography==2.1.4
 PyYAML==3.12
 numpy==1.13.3
