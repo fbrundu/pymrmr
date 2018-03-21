@@ -9,10 +9,6 @@ PymRMR
 .. image:: https://img.shields.io/travis/fbrundu/pymrmr.svg
         :target: https://travis-ci.org/fbrundu/pymrmr
 
-.. image:: https://readthedocs.org/projects/pymrmr/badge/?version=latest
-        :target: https://pymrmr.readthedocs.io/en/latest/?badge=latest
-        :alt: Documentation Status
-
 .. image:: https://pyup.io/repos/github/fbrundu/pymrmr/shield.svg
      :target: https://pyup.io/repos/github/fbrundu/pymrmr/
      :alt: Updates
