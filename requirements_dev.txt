@@ -2,7 +2,7 @@ tox==2.9.1
 watchdog==0.8.3
 wheel==0.30.0
 bumpversion==0.5.3
-pip==9.0.1
+pip==9.0.3
 flake8==3.5.0
 coverage==4.4.1
 Sphinx==1.6.4
