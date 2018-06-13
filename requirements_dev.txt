@@ -10,4 +10,4 @@ cryptography==2.1.4
 PyYAML==3.12
 numpy==1.13.3
 Cython==0.27.3
-pandas==0.22.0
+pandas==0.23.1
