@@ -8,6 +8,6 @@ coverage==4.5.1
 Sphinx==1.6.4
 cryptography==2.3
 PyYAML==3.13
-numpy==1.13.3
+numpy==1.15.0
 Cython==0.27.3
 pandas==0.22.0
