@@ -7,7 +7,7 @@ flake8==3.5.0
 coverage==4.5.1
 Sphinx==1.7.6
 cryptography==2.3.1
-PyYAML==3.13
+pyyaml==4.2b1
 numpy==1.15.0
 Cython==0.28.5
 pandas==0.23.4
