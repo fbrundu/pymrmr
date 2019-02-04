@@ -10,4 +10,4 @@ cryptography==2.5
 pyyaml==4.2b4
 numpy==1.15.0
 Cython==0.29.2
-pandas==0.23.4
+pandas==0.24.1
