@@ -4,7 +4,7 @@ wheel==0.33.1
 bumpversion==0.5.3
 pip==19.0.3
 flake8==3.5.0
-coverage==4.5.1
+coverage==4.5.3
 Sphinx==1.8.5
 cryptography==2.5
 pyyaml==5.1
