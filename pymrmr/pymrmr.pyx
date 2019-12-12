@@ -10,7 +10,7 @@ __version__ = '0.1.1'
 
 cdef extern from 'mrmr.cpp':
   cdef vector[unsigned long] _mRMR(
-    vector[vector[int]] _data,
+    vector[vector[long]] _data,
     vector[string] _names,
     int _method,
     unsigned long _nfeats) except +
