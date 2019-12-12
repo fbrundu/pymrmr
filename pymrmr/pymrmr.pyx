@@ -16,7 +16,7 @@ cdef extern from 'mrmr.cpp':
     unsigned long _nfeats) except +
 
 def mRMR(data, method, nfeats):
-  cdef vector[vector[int]] _data = data.copy().values
+  cdef vector[vector[long]] _data = data.copy().values
   cdef vector[string] _names = [s.encode('utf-8') for s in data.columns]
 
   if method == 'MID': _method = 0
