@@ -9,5 +9,5 @@ Sphinx==1.8.5
 cryptography==2.6.1
 pyyaml==5.2
 numpy==1.16.4
-Cython==0.29.6
+Cython==0.29.15
 pandas==0.24.2
