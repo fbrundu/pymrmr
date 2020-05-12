@@ -3,7 +3,7 @@ watchdog==0.8.3
 wheel==0.33.4
 bumpversion==0.5.3
 pip==19.1.1
-flake8==3.5.0
+flake8==3.8.1
 coverage==5.0
 Sphinx==1.8.5
 cryptography==2.6.1
