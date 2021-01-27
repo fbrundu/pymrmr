@@ -35,7 +35,8 @@ Installation
    pip install numpy Cython
    pip install -U pymrmr
 
-This package needs to be compiled with gcc and g++. On macOS you might need to setup the appropriate environment variables before installation. E.g., if you installed gcc-10 through HomeBrew you might use the following:
+This package needs to be compiled with gcc and g++. On macOS you might need to setup the appropriate environment variables before installation.
+E.g., if you installed gcc-10 through HomeBrew you might use the following:
 
 .. code-block:: bash
 
