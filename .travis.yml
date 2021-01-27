@@ -1,9 +1,9 @@
 language: python
 python:
-  - 3.6
-  - 3.7
-  - 3.8
-  - 3.9
+- 3.6
+- 3.7
+- 3.8
+- 3.9
 env:
 - TOXENV=py
 install:
@@ -15,7 +15,7 @@ deploy:
   distributions: sdist bdist_wheel
   user: fbrundu
   password:
-    secure: mf+mwn4GxzKxKWvUpEGSVKIOx0oFFsR9TNkwe/tiGbIyQ7R3Q7BEweTSQTkGU9+N/+D3YPe2BgDlQupFwg80nXKWv12U/slGd8KGSUUDBsu5heOCESLGXJWpsJAzve9MGp6/Xz2HH7oIV2OvGXYVeNmTEmq7qill32OOjUc7f1RTfMquDa9vEm1Bsy9njp6CmCGaRTubxALsWZvl++GWCVYCOSlNUik6x6ds3v5MrYWVPtGwXCxnH2w6xsIssAeK0cZIaPI3wxiaO3UgAPxusQypqe0btj3h6Bg50Qc7HXpmzIbQ9UNzzgkIVpGfRRpNnr5G2dY0bsgAtCleyxh4tTwGm8l6OxAFmzAAtfQlyOGo3TwcGwSyPliRObIxkvc9NViE+YqCSydQLS8oWeuDk7ArQ1bm0WR+Xzcrz+89uH+1HsiRPCwjPRRGrWjNUIOk8CY+mhuXzzxCkBfFHA7GCJkx8J8RNbjHTuvz+48Xzb/mVBvj0L9ix8dwo7U7lxadz4eADDZCvw4Wdn8UpIGUQmUFkUV1LwD4Z0FTu57Nl/9Ncg/+J/9OCRj2gOaOzzSLjCbtO+28+/VpGpdOvZ4kmyYHXUBv4zpPLAsl7ig8GDUgtIGTb99y0TbQYnol2rZZwNXQN9GbWDAqiQfXRccs3sdfIRoptTBaOCDdbqmDauQ=
+    secure: jKKlD1JHk0A7Xw6YOq3tyt6mq3zzCInTwlzRwS8PO2IBe4ECnRmGivPbRVJWQVN9waJWHpCMCQFpD5Rg2ySo3UV+ao47FQvdjbMJORr90XudQ7M1gnzWM+eC5DLnuKC8M2mMpMNEaE22W5j8Q1qGTNqGGssO3ruau7wm0ecI/BUnmzY1UCdzRAlvidKwOpSQpMrejdyhsHAA4huz/6GTaLv1b+hhEMZ9L6FPXFCHmnsAwOgaTxEGP2doOaYEgk1OD5Y8ZFD7XoMo73BejeDCfM46aJHHrLU2HK2MvNDd6/RPkPGud0wb0uqqs0a7XtL02JLrehT+EdoNevqn/LC2PpVrUUOB9UGhQc/F8MyYEyuW5NORXWb/YwDPdXL1V/Gqak/MwZP8eILz0q7qTJJ+NjIL5JBwTeEsFNhucItRWcRT7QMjZ4xkkrEZ7FVqJ1cvDbZEOXxNu7QA8GrWKZKrT2KCkxKjWegtFXC5zUFojja1H82Fip1qJ3Gng29waHuBIPp8iJxSZEy7vj9HSJJNz47fGyFuD+N3rFxO78WsCS6mJXEbATn082v99Cvj/QCdlD3wTgG5IZW4yx+48uk2kcjVtZcBCNSyE2bZWW4Gq377JuDn9ditTZEZ2ZsQOrTg7YiTLc7HWJdUnB1afKQI/hHw3ohlMBrdVkPDYhSgKKM=
   on:
     tags: true
     repo: fbrundu/pymrmr
