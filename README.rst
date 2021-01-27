@@ -33,7 +33,14 @@ Installation
 .. code-block:: none
 
    pip install numpy Cython
-   pip install pymrmr
+   pip install -U pymrmr
+
+This package needs to be compiled with gcc and g++. On macOS you might need to setup the appropriate environment variables before installation. E.g., if you installed gcc-10 through HomeBrew you might use the following:
+
+.. code-block:: none
+
+   CC=gcc-10 CXX=g++-10 pip install -U pymrmr
+
 
 Usage
 --------

@@ -16,16 +16,20 @@ with open('HISTORY.rst') as history_file:
   history = history_file.read()
 
 requirements = [
-  'numpy>=1.12.0',
+  'numpy>=1.19.5',
 ]
 
 test_requirements = [
   # TODO: put package test requirements here
 ]
 
-if sys.platform == 'darwin':
-  os.environ['CC'] = 'clang-omp'
-  os.environ['CXX'] = 'clang-omp++'
+ecompile_args = []
+elink_args = []
+# if sys.platform != 'darwin':
+  # os.environ['CC'] = 'gcc'
+  # os.environ['CXX'] = 'g++'
+ecompile_args += ['-fopenmp', '-Ofast']
+elink_args += ['-fopenmp']
 
 setup(
   name='pymrmr',
@@ -40,7 +44,7 @@ setup(
   ],
   include_package_data=True,
   setup_requires=[
-    'Cython>=0.25.2',
+    'Cython>=0.29.21',
   ],
   install_requires=requirements,
   license="MIT license",
@@ -61,7 +65,7 @@ setup(
       'pymrmr',
       sources=[os.path.join('pymrmr', 'pymrmr.pyx')],
       language='c++',
-      extra_compile_args=['-fopenmp', '-Ofast'],
-      extra_link_args=['-fopenmp'])],
+      extra_compile_args=ecompile_args,
+      extra_link_args=elink_args)],
   include_dirs=[np.get_include()]
 )
