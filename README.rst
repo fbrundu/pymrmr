@@ -28,22 +28,22 @@ The Python wrapper is subject to MIT license.
 
 
 Installation
---------
+------------
 
-.. code-block:: none
+.. code-block:: bash
 
    pip install numpy Cython
    pip install -U pymrmr
 
 This package needs to be compiled with gcc and g++. On macOS you might need to setup the appropriate environment variables before installation. E.g., if you installed gcc-10 through HomeBrew you might use the following:
 
-.. code-block:: none
+.. code-block:: bash
 
    CC=gcc-10 CXX=g++-10 pip install -U pymrmr
 
 
 Usage
---------
+-----
 
 pymRMR provides the single entry point method :code:`pymrmr.mRMR()`.
 
@@ -121,7 +121,7 @@ The following is an example of execution:
 
 
 Credits
----------
+-------
 
 This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
 
