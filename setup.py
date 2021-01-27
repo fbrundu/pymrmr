@@ -23,17 +23,12 @@ test_requirements = [
   # TODO: put package test requirements here
 ]
 
-ecompile_args = []
-elink_args = []
-# if sys.platform != 'darwin':
-  # os.environ['CC'] = 'gcc'
-  # os.environ['CXX'] = 'g++'
-ecompile_args += ['-fopenmp', '-Ofast']
-elink_args += ['-fopenmp']
+ecompile_args = ['-fopenmp', '-Ofast']
+elink_args = ['-fopenmp']
 
 setup(
   name='pymrmr',
-  version='0.1.9',
+  version='0.1.11',
   description="Python3 binding to mRMR Feature Selection algorithm",
   long_description=readme + '\n\n' + history,
   author="Francesco G. Brundu",

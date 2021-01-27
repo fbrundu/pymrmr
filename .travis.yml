@@ -1,21 +1,23 @@
 language: python
 python:
-  - 3.6
-  - 3.7
-  - 3.8
-  - 3.9
+- 3.6
+- 3.7
+- 3.8
+- 3.9
 env:
 - TOXENV=py
 install:
-- pip install -U tox
+- pip install -U tox-travis
 - pip install -r requirements_dev.txt
 script: tox -e ${TOXENV}
 deploy:
   provider: pypi
-  distributions: sdist bdist_wheel
-  user: fbrundu
+  username: "__token__"
   password:
-    secure: mf+mwn4GxzKxKWvUpEGSVKIOx0oFFsR9TNkwe/tiGbIyQ7R3Q7BEweTSQTkGU9+N/+D3YPe2BgDlQupFwg80nXKWv12U/slGd8KGSUUDBsu5heOCESLGXJWpsJAzve9MGp6/Xz2HH7oIV2OvGXYVeNmTEmq7qill32OOjUc7f1RTfMquDa9vEm1Bsy9njp6CmCGaRTubxALsWZvl++GWCVYCOSlNUik6x6ds3v5MrYWVPtGwXCxnH2w6xsIssAeK0cZIaPI3wxiaO3UgAPxusQypqe0btj3h6Bg50Qc7HXpmzIbQ9UNzzgkIVpGfRRpNnr5G2dY0bsgAtCleyxh4tTwGm8l6OxAFmzAAtfQlyOGo3TwcGwSyPliRObIxkvc9NViE+YqCSydQLS8oWeuDk7ArQ1bm0WR+Xzcrz+89uH+1HsiRPCwjPRRGrWjNUIOk8CY+mhuXzzxCkBfFHA7GCJkx8J8RNbjHTuvz+48Xzb/mVBvj0L9ix8dwo7U7lxadz4eADDZCvw4Wdn8UpIGUQmUFkUV1LwD4Z0FTu57Nl/9Ncg/+J/9OCRj2gOaOzzSLjCbtO+28+/VpGpdOvZ4kmyYHXUBv4zpPLAsl7ig8GDUgtIGTb99y0TbQYnol2rZZwNXQN9GbWDAqiQfXRccs3sdfIRoptTBaOCDdbqmDauQ=
+    secure: Cg6gBwNFeLQeIjCwdhhvEMf37m+0LrGRyunrjqqwgla7Co5ImgHzg4gVzeT/R18j9K2I2Tf12gPhFt7ZF1nfoBjwGJ7eciB+4O5YK2sP/1C3hGpuyl6twRajTa6RA6IfHJ4S7FZA7TbyZ4Y7BQjd9tf8wTC3DFqu2woYwbWw3uGzJ9AJHkbT8bj8lBVBA4ETzu5Y7EuwGbXLwVi5Hx87DezNAh9iV5imYco7w3lOPY+3S33wS262zVNVpeMuFTEOyPwMWv2oTqmsQL1yRYxEyAUdJKSPcTtLPxP0WRWxwvtOsH9lhn5vz+j8c6fMXOd9Oub0wwp6W1MEEZcIN+/wx2uDpYFaoEe04Zq9TDIMbxGIjqvK3rGrWunbjsUI4I7ldCARtJAp40AAzdWEI4/5ekG1iZDhmSCLHXQs4tyewDf6cUNtyLdr0b2aENQTsA9Y2dEqbrLGQFTcwjdQTkrE+3awDTkwrMfVmLmjRMvb7NIQRn4BLSu9qs/6os/tjpY7fxBak0H+N6LgUgepq34lz499moNB8MtCgcslw08IYE716/+Qzw6DDwlurmbulLUCdESbCaIBFGY9Zx8o3WrOjxb9/xBrjJPbU4MbvXrMN4Xl1Z3CF19tI7y2uCHFhT4zeNOaHmhNLlthXnB3Hzx9o//e64yuPZFxs2apgqMa5aA=
+  skip_cleanup: true
+  skip_existing: true
+  distributions: sdist
   on:
     tags: true
     repo: fbrundu/pymrmr
