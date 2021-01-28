@@ -7,18 +7,18 @@ python:
 env:
 - TOXENV=py
 install:
-- pip install -U tox
+- pip install -U tox-travis
 - pip install -r requirements_dev.txt
 script: tox -e ${TOXENV}
 deploy:
   provider: pypi
+  skip_cleanup: true
+  skip_existing: true
   distributions: sdist bdist_wheel
   user: fbrundu
   password:
-    secure: "QI17s7/pZzeJOZNpVmWnlHwy4sB7pE1qZ2flMWcbzM+iDo3qAfip+b5QngTISxj7K6X+Gby6GEAYjGo6HxwgrR5mkg3IcQ6UzShEo8TFYRmVlUoMRxq3Swee4ch66DlZ0F8sg5dkPfYssl8HXSAJYIIfAfkYVnPImB2oZhO57UnKQgwrG5z/eP/E7dUPtOatnShYnjIWrEExrEGFjoalA+MlBE6VZOLOyxMZdSJsm5GYGmXEiE2C71xOXxZpi5OXuXVT+zef40Kf9rhqp5l2klXbv+r1ynp2Z8+19NRYxyFDSe4us1nEQpOaaPDWkMq/h1YQjfe3hKOSxl4bh6UclBRz0C6eg7SojnC3d+TQauCPV4rqQK+cbfG87i22zKVV4TsE3Chj4LRpqusFQ9Y4bSzpmhIc7tivXs/2L4qPnJhJaaSMR2yFRzkss3+GVnIPuUAoZEwSv4Hjp51s+gBhfw8rxStn/l4mljTFEBHVJC/R14PstSw+IDta+IHfYMI++Ni5im7MbHqOr6Dj6mt77AaQTr0Co7Hcvw4soI3lpYRZxkVmuxL+2YcnUX5ktGOOsEP21MAouDpC8RNVpAkhDQvh3MI2/ruZPuee2eb1eZPHTrmvtJiGpXy29rV14ijYonuDzTVhEIaWG/JzbZCiNgFz6FXrW/34dzchWTPbka4="
+    secure: "EkIWbpWDI6T8XB1OfF9s283b61EL54lKFFYbi3OsCqb78F5ar8wmGVjX0vxInbRh9havUfy3dyp1zWdaoHY8AC948tnu+z6+coQaDVHZVTQwNxGLtXGWkV5ghZJJ3grvcWjPuOP92IaR6t1U4WLtaGX6ANfgWWu0yyXg2YsqehqxJrAbpSZNm9zh6FuvFo0Cop5lRaQz7nspUFb7XThu0ctQrfHxUUqpUafn+8ZHIYM7lczXzHeJQICixBG7el6Yqg84i4rkJcXtj1pOq4rPT7PCkKb5IpmjBYScVKljeRbj2aKwsvj2ebxRjSM3hFK2ZhaGsJjozXWZnmehrLVGM02loKs2vkQmsHOF3OIbVhbT95yuhTpGRBl3LLDnW08BqC/isPYUqkoSfxq97S61wSCwptuTf3qxFiDPkIzNw/DfupJAL3nwCjecTA1A9ZUJJEMDiChNjnX5rmuNwus2wfNl8wjDwUGjyyI98U2GbxOs0T6dQrAl8uaGLbctpgcqYyVaDvmRj/qoMrRASYAmZFVBhM+lo/+9LhT1N0CbttwJM3jb0ahc+lsDGYeJ8GHrO3y5B9y6KiC/orEKwyTPk8C94RMYjwPkZ2sNbSZ1CMglCu/JK63RPEYbf7P2DsLTLCiR7jpweLM15Z5/jeTWvnjpBxMiID45/72UHhoxOzU="
   on:
     tags: true
     repo: fbrundu/pymrmr
     condition: "$TOXENV == py"
-  skip_cleanup: true
-  skip_existing: true
