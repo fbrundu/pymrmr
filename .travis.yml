@@ -1,14 +1,14 @@
 language: python
 python:
-  - 3.6
-  - 3.7
-  - 3.8
-  - 3.9
+- 3.6
+- 3.7
+- 3.8
+- 3.9
 env:
-  - TOXENV=py
+- TOXENV=py
 install:
-  - pip install -U tox-travis
-  - pip install -r requirements_dev.txt
+- pip install -U tox-travis
+- pip install -r requirements_dev.txt
 script: tox -e ${TOXENV}
 deploy:
   provider: pypi
@@ -16,9 +16,9 @@ deploy:
   skip_existing: true
   distributions: sdist bdist_wheel
   user: fbrundu
-  password:
-    secure: EkIWbpWDI6T8XB1OfF9s283b61EL54lKFFYbi3OsCqb78F5ar8wmGVjX0vxInbRh9havUfy3dyp1zWdaoHY8AC948tnu+z6+coQaDVHZVTQwNxGLtXGWkV5ghZJJ3grvcWjPuOP92IaR6t1U4WLtaGX6ANfgWWu0yyXg2YsqehqxJrAbpSZNm9zh6FuvFo0Cop5lRaQz7nspUFb7XThu0ctQrfHxUUqpUafn+8ZHIYM7lczXzHeJQICixBG7el6Yqg84i4rkJcXtj1pOq4rPT7PCkKb5IpmjBYScVKljeRbj2aKwsvj2ebxRjSM3hFK2ZhaGsJjozXWZnmehrLVGM02loKs2vkQmsHOF3OIbVhbT95yuhTpGRBl3LLDnW08BqC/isPYUqkoSfxq97S61wSCwptuTf3qxFiDPkIzNw/DfupJAL3nwCjecTA1A9ZUJJEMDiChNjnX5rmuNwus2wfNl8wjDwUGjyyI98U2GbxOs0T6dQrAl8uaGLbctpgcqYyVaDvmRj/qoMrRASYAmZFVBhM+lo/+9LhT1N0CbttwJM3jb0ahc+lsDGYeJ8GHrO3y5B9y6KiC/orEKwyTPk8C94RMYjwPkZ2sNbSZ1CMglCu/JK63RPEYbf7P2DsLTLCiR7jpweLM15Z5/jeTWvnjpBxMiID45/72UHhoxOzU=
   on:
     tags: true
     repo: fbrundu/pymrmr
     condition: "$TOXENV == py"
+  password:
+    secure: h+AZD+zl/ekwdYYE/INPpNtCaurw1XXTa15TbqUSjkRScnnKW+jK+lZeUU9AimInmrwzLWikHi5QzYKBgzc7hALeHh9T6omYGgvRwL+95Iy1wkZks5nFSMEnTKPM/Qe1L5yY3ouL5Tnq8mQckN3v4MEKxJWzEBFxTX54piv4YtPolqGW2X3ksGs7zgNFpL5ekQ0RypUprv6P6E81rkaef6XrLGWJ3xjT21Lcgu0aRSJrYPSUsjqc1uqNfSviBfW64VVhKAlHgYjHpd24qbJ+LykMq1lcDgwO/g94G38xP6Q+8N5mUEj9dw4X03gv6BO7AsEo09RET1wpXWO3kvKlSvSdAaiFhHNhyFT81kaqr55J/n0khMuCzgZG5DoWfcpn2orG/WuNuAWXTvgfxP0+6fraPOzzLM5mzBFVj3s7xGzVXlKHTWRf/gdTEDGDd4HRekBnNLzD/HV9Ewpp93R1epMfZ6aZgBqMxqH6JHXpU6wE5hzhobUwPWiSfEQqT+VBhKDoyrbrgoylx1ypr6Z7MniiOAHwv9biUJWoBgutejesjQqtmnYvGwxl7XRoLOO6lKP9X/H9DXf6Q/o0fxuc2CFvq/+HfxtBdGZ2Ij7kykl4I+3no8XEdXloY7OFwza/GD4MVnRODvrRevOP6nsbFbx6LQmjmuEsgXRkTKQ9fDA=
