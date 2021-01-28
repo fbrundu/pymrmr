@@ -12,13 +12,13 @@ install:
 script: tox -e ${TOXENV}
 deploy:
   provider: pypi
-  skip_cleanup: true
+  username: fbrundu
+  password:
+    secure: MW7+IWc+waKU4MQiK5pxXEflrAVbVaTmYKz9beQ3b/RDEn/jBal6Xd/hHd5Mex9Ypo7WfA+n15JwxSKBGSsbz687SG1SZKlcBIrgHsNmVzJkoQNjv+y4HTTjBo9e/ib8BiXTTY/4cAWwUI8205wwNhmUAISBtCL23DOkl0lNq6f1E//K9KOcF/oONjq1TDc3YGA/syEqHJ/lNDFlGcoFISVkMiO3hXEOzReqFBANO50D2jMPVweAypCwOViZ5JL5/k8Pgz9rOhXQw2r/0u8YZ9fN7lnrFTVcAVpMC38U4gxtbrG58QdHy3FusBFqufBwZEoyeTOpMTSCNHE5jQbOm8U428EOfapuIABi4+/70fej3wGlpy3fFHXq52AGMKrA5F0ncCyVeVb2SrtqYjIsp7F3uXeYQML7skMxR4fDL6OIGrmOw2H/dpB/yCS/c31UrmH8ZpWw8gGDc5IalodTSVmRbH8oA41wxpgltzSaS4a6QJIcBqfyfycKpJQTpH9JTmamKBWH4/oes0QwCqjh3xnOU/ahej1gSrFTYgJ2CGleKtHtgMsoPO+d1EO0HCzfk/M6QiW9mgs/47wCiyJVgyvM7LNOK10OJ2fHtNrKjyYDIuWM/Z3FvQA3/G7Dzoy5oliHsxQyZug+Dj38PBs/6oan1bXMjcSRlvROez39S70=
+  cleanup: true
   skip_existing: true
   distributions: sdist bdist_wheel
-  user: fbrundu
   on:
     tags: true
     repo: fbrundu/pymrmr
     condition: "$TOXENV == py"
-  password:
-    secure: h+AZD+zl/ekwdYYE/INPpNtCaurw1XXTa15TbqUSjkRScnnKW+jK+lZeUU9AimInmrwzLWikHi5QzYKBgzc7hALeHh9T6omYGgvRwL+95Iy1wkZks5nFSMEnTKPM/Qe1L5yY3ouL5Tnq8mQckN3v4MEKxJWzEBFxTX54piv4YtPolqGW2X3ksGs7zgNFpL5ekQ0RypUprv6P6E81rkaef6XrLGWJ3xjT21Lcgu0aRSJrYPSUsjqc1uqNfSviBfW64VVhKAlHgYjHpd24qbJ+LykMq1lcDgwO/g94G38xP6Q+8N5mUEj9dw4X03gv6BO7AsEo09RET1wpXWO3kvKlSvSdAaiFhHNhyFT81kaqr55J/n0khMuCzgZG5DoWfcpn2orG/WuNuAWXTvgfxP0+6fraPOzzLM5mzBFVj3s7xGzVXlKHTWRf/gdTEDGDd4HRekBnNLzD/HV9Ewpp93R1epMfZ6aZgBqMxqH6JHXpU6wE5hzhobUwPWiSfEQqT+VBhKDoyrbrgoylx1ypr6Z7MniiOAHwv9biUJWoBgutejesjQqtmnYvGwxl7XRoLOO6lKP9X/H9DXf6Q/o0fxuc2CFvq/+HfxtBdGZ2Ij7kykl4I+3no8XEdXloY7OFwza/GD4MVnRODvrRevOP6nsbFbx6LQmjmuEsgXRkTKQ9fDA=
