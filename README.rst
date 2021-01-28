@@ -14,6 +14,14 @@ PymRMR
      :alt: Updates
 
 
+
+THIS PACKAGE IS CURRENTLY NOT MAINTAINED.
+-----------------------------------------
+It is available here for reference, but I currently do not have the time to review issues/pull requests.
+
+Original README
+---------------
+
 Python3 binding to mRMR Feature Selection algorithm [1]
 
 Original author: Hanchuan Peng (http://home.penglab.com/proj/mRMR/)
