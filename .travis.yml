@@ -10,6 +10,7 @@ jobs:
       language: python
       python: 3.6
       services: docker
+      services: docker
       env:
       - PYTHON=python
       - TOXENV=py
@@ -49,11 +50,14 @@ jobs:
     #     - PYTHON=C:\\Python36\\python
 
 install:
+- $PYTHON -m pip install -U pip
 - $PYTHON -m pip install -U tox-travis
 - $PYTHON -m pip install -r requirements_dev.txt
 - $PYTHON -m pip install cibuildwheel==1.8.0
 
-script: tox -e ${TOXENV}
+script:
+- tox -e ${TOXENV}
+- python3 -m cibuildwheel --output-dir wheelhouse
 
 deploy:
   provider: pypi
