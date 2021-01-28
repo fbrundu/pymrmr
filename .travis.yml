@@ -50,7 +50,7 @@ jobs:
 
 install:
 - $PYTHON -m pip install -U tox-travis
-- $PYTHON pip install -r requirements_dev.txt
+- $PYTHON -m pip install -r requirements_dev.txt
 - $PYTHON -m pip install cibuildwheel==1.8.0
 
 script: tox -e ${TOXENV}
