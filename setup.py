@@ -28,7 +28,7 @@ elink_args = ['-fopenmp']
 
 setup(
   name='pymrmr',
-  version='0.1.10',
+  version='0.1.11',
   description="Python3 binding to mRMR Feature Selection algorithm",
   long_description=readme + '\n\n' + history,
   author="Francesco G. Brundu",
