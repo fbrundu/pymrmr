@@ -12,7 +12,7 @@ install:
 script: tox -e ${TOXENV}
 deploy:
   provider: pypi
-  cleanup: false
+  skip_cleanup: true
   skip_existing: true
   distributions: sdist bdist_wheel
   user: fbrundu
