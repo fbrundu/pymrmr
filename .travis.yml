@@ -1,16 +1,60 @@
 language: python
-python:
-- 3.6
-- 3.7
-- 3.8
-- 3.9
-env:
-- TOXENV=py
+
+branches:
+  only:
+  - master
+
+jobs:
+  include:
+    - name: Linux | x86_64 + i686 | Python 3.6
+      language: python
+      python: 3.6
+      services: docker
+      env:
+      - PYTHON=python
+      - TOXENV=py
+
+    - name: Linux | arm64 | Python 3.6
+      language: python
+      python: 3.6
+      services: docker
+      arch: arm64
+      env:
+      - PYTHON=python
+      - TOXENV=py
+
+    - name: Linux | ppc64le | Python 3.6
+      language: python
+      python: 3.6
+      services: docker
+      arch: ppc64le
+      env:
+      - PYTHON=python
+      - TOXENV=py
+
+    # - name: macOS | x86_64 | Python 3.x
+    #   os: osx
+    #   env:
+    #     - PYTHON=python3
+    #     - PYTEST_ADDOPTS='-k "unit_test or test_0_basic" --suppress-no-test-exit-code'
+
+    # - name: Windows | x86_64 | Python 3.6
+    #   os: windows
+    #   language: shell
+    #   before_install:
+    #    - choco install python3 --version 3.6.8 --no-progress -y
+    #    # Update root certificates to fix SSL error; see http://www.chawn.com/RootCerts.htm
+    #    - powershell "md C:\temp\certs; CertUtil -generateSSTFromWU C:\temp\certs\RootStore.sst; Get-ChildItem -Path C:\\temp\certs\Rootstore.sst | Import-Certificate -CertStoreLocation Cert:\\LocalMachine\\Root\\ | out-null"
+    #   env:
+    #     - PYTHON=C:\\Python36\\python
+
 install:
-- pip install -U tox-travis
-- pip install -r requirements_dev.txt
-- python3 -m pip install cibuildwheel==1.8.0
+- $PYTHON -m pip install -U tox-travis
+- $PYTHON pip install -r requirements_dev.txt
+- $PYTHON -m pip install cibuildwheel==1.8.0
+
 script: tox -e ${TOXENV}
+
 deploy:
   provider: pypi
   username: "__token__"
@@ -22,22 +66,3 @@ deploy:
   on:
     tags: true
     repo: fbrundu/pymrmr
-    condition: "$TOXENV == py"
-jobs:
-  include:
-    # perform a linux build
-    - services: docker
-    # and a mac build
-    - os: osx
-      language: shell
-    # and a windows build
-    - os: windows
-      language: shell
-      before_install:
-        - choco install python --version 3.8.0
-        - export PATH="/c/Python38:/c/Python38/Scripts:$PATH"
-        # make sure it's on PATH as 'python3'
-        - ln -s /c/Python38/python.exe /c/Python38/python3.exe
-script:
-  # build the wheels, put them into './wheelhouse'
-  - python3 -m cibuildwheel --output-dir wheelhouse

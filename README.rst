@@ -7,7 +7,7 @@ PymRMR
         :target: https://pypi.python.org/pypi/pymrmr
 
 .. image:: https://img.shields.io/travis/fbrundu/pymrmr.svg
-        :target: https://travis-ci.org/fbrundu/pymrmr
+        :target: https://travis-ci.com/fbrundu/pymrmr
 
 .. image:: https://pyup.io/repos/github/fbrundu/pymrmr/shield.svg
      :target: https://pyup.io/repos/github/fbrundu/pymrmr/
