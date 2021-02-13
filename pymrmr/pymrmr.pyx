@@ -10,13 +10,13 @@ __version__ = '0.1.1'
 
 cdef extern from 'mrmr.cpp':
   cdef vector[unsigned long] _mRMR(
-    vector[vector[int]] _data,
+    vector[vector[long]] _data,
     vector[string] _names,
     int _method,
     unsigned long _nfeats) except +
 
 def mRMR(data, method, nfeats):
-  cdef vector[vector[int]] _data = data.copy().values
+  cdef vector[vector[long]] _data = data.copy().values
   cdef vector[string] _names = [s.encode('utf-8') for s in data.columns]
 
   if method == 'MID': _method = 0
