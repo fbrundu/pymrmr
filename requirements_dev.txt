@@ -1,4 +1,4 @@
-tox==3.21.4
+tox==4.6.4
 watchdog==1.0.2
 wheel==0.36.2
 bumpversion==0.6.0
